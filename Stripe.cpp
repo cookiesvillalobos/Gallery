@@ -208,7 +208,7 @@ string Stripe::read() {
         printf("Lost info, recovering...");
         printf("\n");
         restore();
-        return "";
+        return read();
     }
 
 }

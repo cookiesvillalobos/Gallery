@@ -12,9 +12,14 @@ void write(int, string, string, string, string, string, string);
 
 string read(int, string);
 
-vector<string> readAll(int);
+vector<string> readAllfromAF(int);
 
 bool alreadyExist(int);
+
+void createFailure(int);
+
+vector<vector<string>> readAll();
+
 int posF = -1;
 
 #endif //RAID5_LIBRARY_H

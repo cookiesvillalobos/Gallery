@@ -58,7 +58,7 @@ bool alreadyExist(int Id) {
     return false;
 }
 
-vector<string> readAll(int nameFo) {
+vector<string> readAllfromAF(int nameFo) {
     if(alreadyExist(nameFo)){
         vector<string> vector = folders[posF]->readAll();
         posF = -1;
@@ -71,6 +71,34 @@ vector<string> readAll(int nameFo) {
     }
 
 
+}
+
+void createFailure(int disk) {
+    if(!folders.empty()){
+        for(int i = 0; i < folders.size(); i++){
+            folders[i]->delDisk(disk);
+        }
+    }else{
+        printf("\n");
+        printf("No hay datos almacenados");
+        printf("\n");
+    }
+
+}
+
+vector<vector<string>> readAll() {
+    if(!folders.empty()){
+        vector<vector<string>> vector;
+        for(int i = 0; i < folders.size(); i++){
+            vector.push_back(folders[i]->readAll());
+        }
+        return vector;
+    }else{
+        printf("\n");
+        printf("No hay datos almacenados");
+        printf("\n");
+        return  {};
+    }
 }
 
 
