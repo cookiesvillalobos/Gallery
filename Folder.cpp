@@ -17,7 +17,11 @@ Folder::Folder(int name0, string im, string imN, string imD, string imS, string 
 }
 
 string Folder::read(string stripe) {
-    getStripe(stripe)->read();
+    if(stripe == "I"){
+        getStripe(stripe)->recomposeBText();
+    } else{
+        getStripe(stripe)->read();
+    }
 
 }
 

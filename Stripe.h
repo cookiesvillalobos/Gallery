@@ -24,13 +24,13 @@ public:
     void delDisk(int);
     void restore();
     void update(string);
+    string recomposeBText();
 
 
 private:
     string data;
     void diskD();
     void parity();
-    string recomposeBText();
     string BToText(string);
     int delPos = -1;
 
